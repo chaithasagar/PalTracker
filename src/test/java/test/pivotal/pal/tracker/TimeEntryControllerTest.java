@@ -45,6 +45,8 @@ public class TimeEntryControllerTest {
 
         verify(timeEntryRepository).create(timeEntryToCreate);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+        System.out.print("Response body  " +  response.getBody());
+        System.out.print("Expected resut  body  " +  expectedResult);
         assertThat(response.getBody()).isEqualTo(expectedResult);
     }
 
